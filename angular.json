@@ -22,12 +22,15 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/scripts"
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/scripts/file.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -89,10 +92,15 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/scripts/file.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "10543892-1d89-4f04-98a0-4d671c69c55e"
   }
 }

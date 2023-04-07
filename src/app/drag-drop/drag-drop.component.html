@@ -1,0 +1,68 @@
+<div class="body">
+  <div class="container fileUploadWrapper">
+  <button (click)="logOut()" class="bttn" style="margin: 10px;">Logout</button>
+
+    <form [formGroup]="form">
+      <div class="row">
+        <!-- Progress Bar -->
+        <div class="col-md-12" *ngIf="progress">
+          <div class="progress form-group">
+            <div
+              class="progress-bar progress-bar-striped bg-success"
+              role="progressbar"
+              [style.width.%]="progress"
+            ></div>
+          </div>
+        </div>
+
+        <div *ngIf="edited" class="col-md-12">
+          <div
+            id="upload"
+            class="fileupload"
+            appDragDropFileUpload
+            (click)="fileField.click()"
+            (fileDropped)="upload($event)"
+          >
+            <span class="ddinfo">Choose a file or drag here</span>
+            <input
+              type="file"
+              name="avatars"
+              #fileField
+              (change)="upload($any($event).target.files)"
+              hidden
+              multiple
+            />
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="image-list" *ngFor="let file of fileArr; let i = index">
+            <p>{{ file.item.name }}</p>
+          </div>
+          <p class="message">{{ msg }}</p>
+        </div>
+      </div>
+    </form>
+    <div style="display: flex; flex-direction: column;justify-content: center; text-align: center;margin-top: 50px;">
+
+      <h1 *ngIf="edited2">Select period type and period</h1>
+
+    <div *ngIf="edited2" id="body2">
+      <!-- <p>period works!</p> -->
+      <form (submit)="onSubmit_period()">
+        <select name="periodType" id="pId" [(ngModel)]="periodType">
+          <option class="opn" value="D">Day</option>
+          <option class="opn" value="W">Week</option>
+          <option class="opn" value="M">Month</option>
+          <option class="opn" value="Y">Year</option>
+        </select>
+        <input id="num" name="periodNum" type="number" [(ngModel)]="periodNum"/>
+          <button type="submit" class="bttn">Go</button>
+        
+      </form>
+    </div>
+
+    </div>
+    
+  </div>
+</div>

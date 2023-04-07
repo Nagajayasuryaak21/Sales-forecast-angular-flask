@@ -1,0 +1,7 @@
+Navigate to 'angular-canvasjs-chart-samples' (extracted folder) in Command Prompt
+Run 'npm install' to install all npm dependencies
+Run 'ng serve --open' to run the project
+
+CanvasJS Charts works with all versions of Angular
+
+If you have any queries or need assistance, please post on our free technical support forum at https://canvasjs.com/forums/

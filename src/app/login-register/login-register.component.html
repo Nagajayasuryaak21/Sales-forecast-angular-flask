@@ -1,0 +1,144 @@
+
+<body>
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form (submit)="onSubmit_log()" class="sign-in-form">
+          <h2 class="title">Sign in</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" name="username" [(ngModel)]="username"  placeholder="Username" required/>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" [(ngModel)]="password" placeholder="Password" required/>
+          </div>
+          <input type="submit" value="Login" class="btn solid" />
+          <p class="social-text">Or Sign in with social platforms</p>
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </form>
+        <form (submit)="onSubmit_reg()"  class="sign-up-form">
+          <h2 class="title">Sign up</h2>
+          <!-- <div class="success alert">
+            <div class="content2">
+              <div class="icon">
+                <svg
+                  width="50"
+                  height="40"
+                  id="Layer_1"
+                  style="enable-background: new 0 0 128 128"
+                  version="1.1"
+                  viewBox="0 0 128 128"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <g><circle fill="#fff" cx="64" cy="64" r="64" /></g>
+                  <g>
+                    <path
+                      fill="#3EBD61"
+                      d="M54.3,97.2L24.8,67.7c-0.4-0.4-0.4-1,0-1.4l8.5-8.5c0.4-0.4,1-0.4,1.4,0L55,78.1l38.2-38.2   c0.4-0.4,1-0.4,1.4,0l8.5,8.5c0.4,0.4,0.4,1,0,1.4L55.7,97.2C55.3,97.6,54.7,97.6,54.3,97.2z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <p>A Success Message</p>
+            </div>
+            <button class="close">
+              <svg
+                height="18px"
+                id="Layer_1"
+                style="enable-background: new 0 0 512 512"
+                version="1.1"
+                viewBox="0 0 512 512"
+                width="18px"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <path
+                  fill="#69727D"
+                  d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"
+                />
+              </svg>
+            </button>
+          </div> -->
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" name="username" [(ngModel)]="username" placeholder="Username" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" [(ngModel)]="email" placeholder="Email" required/>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" [(ngModel)]="password" placeholder="Password" required/>
+          </div>
+          <input type="submit" class="btn" value="Sign up" />
+          <p class="social-text">Or Sign up with social platforms</p>
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>New here ?</h3>
+          <p>
+            Become a part of us ! ! !
+          </p>
+          <button class="btn transparent" (click)="onclick1()" id="sign-up-btn">Sign up</button>
+        </div>
+        <img
+          src="assets/img/log.svg"
+          class="image"
+          alt="Description of image"
+        />
+      </div>
+      <div class="panel right-panel">
+        <div class="content">
+          <h3>One of us ?</h3>
+          <p>
+            Already a part of us ! ! !
+          </p>
+          <button class="btn transparent" (click)="onclick2()" id="sign-in-btn">Sign in</button>
+        </div>
+        <img
+          src="assets/img/register.svg"
+          class="image"
+          alt="Description of image"
+        />
+      </div>
+    </div>
+  </div>
+</body>
+<!-- <h1>hello 123</h1>
+<p>utdgh</p> -->
